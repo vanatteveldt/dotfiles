@@ -17,3 +17,8 @@ for fn in os.listdir(srcdir):
     if os.path.exists(dest):
         os.remove(dest)
     os.symlink(src, dest)
+
+bashrc = os.path.expanduser("~/.bashrc")
+if ". .bashrc_extra\n" not in open(bashrc).read():
+    with open(bashrc, "a") as myfile:
+        myfile.write(". .bashrc_extra\n")
