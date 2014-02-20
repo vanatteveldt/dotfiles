@@ -1,0 +1,18 @@
+[ui] 
+merge = internal:merge
+username=wva
+username = Wouter van Atteveldt <wouter@vanatteveldt.com>
+
+[extensions]
+color =
+hgext.graphlog = 
+fetch = 
+
+[auth]
+google.prefix = https://code.google.com/
+google.username = vanatteveldt
+google.password = 
+
+bitbucket.prefix = https://bitbucket.org/
+bitbucket.username = wva
+bitbucket.password = 

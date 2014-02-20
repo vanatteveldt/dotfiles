@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DIR=/home/wva/.emacs.d/server
+PORT=$(grep -o "[0-9]\+ " $DIR/server)
+read  -rd '' PORT <<< "$PORT"
+
+echo "Copying $DIR/server to amcat3:$DIR"
+scp  $DIR/server amcat3:$DIR
+
+echo "Forwarding port with ssh -R $PORT:localhost:$PORT amcat3 -N &"
+ssh -R $PORT:localhost:$PORT amcat3 -N 

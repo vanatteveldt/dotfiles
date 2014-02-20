@@ -1,0 +1,57 @@
+!Xft.dpi:                      121
+Xft.antialias:                 true
+Xft.hinting:                   true
+Xft.hintstyle:                 hintfull
+Xft.rgba:                      rgb
+xcalendar*firstDay:            1
+xcalendar*markHoliday:         false
+!Xcursor.theme:                whitelarge
+!Xcursor.size:                 32
+
+!-------------------------------------------------------------------------------
+!
+!
+!      A T E R M - Setting
+!
+!
+Aterm*background:		#000000
+Aterm*foreground:		#ffffff
+Aterm*transparent:		true
+Aterm*shading:			60
+Aterm*cursorColor:		#d8d8d8
+Aterm*scrollbars:		false
+Aterm*saveLines:		2000
+Aterm*tinting:			gray
+Aterm*scrollBar:		false
+!Aterm*scrollBar_right:	true
+Aterm*transpscrollbar:		true
+Aterm*borderwidth:		0
+aterm*font:*-*-fixed-medium-r-normal--*-120-*-*-*-*-iso8859-1 
+aterm*boldFont:*-*-fixed-bold-r-normal--*-*-120-*-*-*-*-iso8859-1 
+Aterm*fading:			70  
+
+!colors
+!black
+Aterm*color0:		#333333
+Aterm*color8:		#686868
+!red
+Aterm*color1:		#CA5E5E
+Aterm*color9:		#FF595D
+!green
+Aterm*color2:		#ABCB8D
+Aterm*color10:		#AFD78A
+!yellow
+Aterm*color3:		#C48D62
+Aterm*color11:		#E0A765
+!blue
+Aterm*color4:		#A4BBCD
+Aterm*color12:		#4E86A6
+!magenta
+Aterm*color5:		#CC98E0
+Aterm*color13:		#E1A2DC
+!cyan
+Aterm*color6:		#44CACF
+Aterm*color14:		#6CBFC4
+!white
+Aterm*color7:		#E7E6DD
+Aterm*color15:		#F0EFE7  

@@ -34,3 +34,17 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# Emacs meuk 
+*~
+\#*\#
+.\#*
+
+# Vim cruft
+*.sw[op]
+
+# PyCharm meuk
+.idea
+
+# static files
+navigator/media/static

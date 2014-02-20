@@ -1,0 +1,5 @@
+[user]
+	name = Wouter van Atteveldt
+	email = wouter@vanatteveldt.com
+[push]
+	default = simple
