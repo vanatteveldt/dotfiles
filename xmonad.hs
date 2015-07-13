@@ -53,13 +53,10 @@ mylayoutHook =  smartBorders(tiled) ||| noBorders (Full)
 startup :: X ()
 startup = do
           -- spawn "feh --bg-scale ~/desktop.png"
-          spawn "trayer --edge top --align right --SetDockType true --SetPartialStrut false  --expand true --width 10 --transparent true --alpha 0 --tint 0x000D2A --height 19"
-          spawn "volumeicon"
-          spawn "pidgin"
-          spawn "synapse -s"
- 	  spawn "/home/wva/.dropbox-dist/dropboxd"
+          spawn "trayer --edge top --align right --SetDockType true --SetPartialStrut false  --expand true --width 10 --transparent true --alpha 0 --tint 0x000D2A --height 32"
+	  spawn "/var/lib/dropbox/.dropbox-dist/dropboxd"
 	  spawn "xfce4-power-manager"
-
+	  spawn "synapse -s"
           
 -- http://www.haskell.org/haskellwiki/Xmonad/Frequently_asked_questions#Rebinding_the_mod_key_.28Alt_conflicts_with_other_apps.3B_I_want_the_____key.21.29
 
@@ -88,11 +85,7 @@ myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 myManageHook = composeAll [title =? "Gajim" --> doF (W.shift "8:chat")
-	     		  ,className =? "Firefox" --> doF (W.shift "1:web")
-			  ,className =? "Evolution" --> doF (W.shift "9:mail")
-			  ,className =? "Claws-mail" --> doF (W.shift "9:mail")
-	       		  ,title =? "Ario" --> doF (W.shift "7:music")
                           ,className =? "Xfce4-notifyd" --> doIgnore
-                          
+			  ,resource =? "Do" -->doIgnore                          
                           ]
 

@@ -1,4 +1,6 @@
-Config {font = "xft:Nimbus Sans L-8:bold:size=6"
+Config {
+     font =         "xft:Bitstream Vera Sans Mono:size=16:bold:antialias=true"
+--font = "xft:Nimbus Sans L-8:bold:size=14"
        , bgColor = "#000D2A"
        , fgColor = "white"
        , position = TopW L 90
