@@ -40,7 +40,7 @@
 
 (global-set-key [f12] 'recompile)
 
-(set-default-font "Source code pro-18")
+(set-default-font "Source code pro-10")
 
 (scroll-bar-mode -1)
 (menu-bar-mode 0)

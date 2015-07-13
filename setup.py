@@ -3,7 +3,9 @@
 import sys, os, os.path
 
 map = {"synapse_config.json" : "~/.config/synapse/config.json",
-       "xmonad.hs" : "~/.xmonad/xmonad.hs"}
+       "xmonad.hs" : "~/.xmonad/xmonad.hs",
+       "i3config": "~/.i3/config",
+       "i3status.conf": "~/.i3/i3status.conf"}
 
 srcdir, scriptname = os.path.split(sys.argv[0])
 srcdir = os.path.join(os.getcwd(), srcdir)

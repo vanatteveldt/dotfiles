@@ -23,7 +23,9 @@ set $mod Mod4
 
 
 # font for window titles. ISO 10646 = Unicode
-font pango: M+ 1m, FontAwesome, Ionicons, 16
+# font pango: M+ 1m, FontAwesome, Ionicons, 16
+# font pango: M+ 1m, FontAwesome, Ionicons, 10
+font pango:Source Code Pro 10px
  
 # colors
 # from: https://gist.github.com/paulbdavis/4956329
@@ -185,6 +187,16 @@ bar {
     mode hide
     font pango:Source Code Pro 12px	
 }
+
+bar {
+    position top
+    status_command i3status
+    output HDMI-0
+    mode dock
+    font pango:Source Code Pro 10px	
+}
+
+
 exec dropbox start
 exec nm-applet
 exec xset mouse 2 0
@@ -218,3 +230,5 @@ hide_edge_borders both
 
 bindsym $mod+"bracketleft" exec "xinput set-prop 12 'Device Enabled' 1"
 bindsym $mod+"bracketright" exec "xinput set-prop 12 'Device Enabled' 0"
+
+new_window 1pixel
