@@ -60,8 +60,7 @@ startup = do
 	  spawn "empathy"
 	  spawn "nm-applet"	
  	  spawn "/home/wva/.dropbox-dist/dropboxd"
-
-
+	  spawn "xfce4-power-manager"
           
 -- http://www.haskell.org/haskellwiki/Xmonad/Frequently_asked_questions#Rebinding_the_mod_key_.28Alt_conflicts_with_other_apps.3B_I_want_the_____key.21.29
 
@@ -92,7 +91,5 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 myManageHook = composeAll [className =? "Empathy" --> doF (W.shift "8:chat")
                           ,className =? "Xfce4-notifyd" --> doIgnore
 			  ,className =? "Do" --> doIgnore
-
-
                           ]
 

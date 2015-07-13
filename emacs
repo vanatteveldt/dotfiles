@@ -26,9 +26,6 @@
       '(tabs newline tab-mark newline-mark lines trailing))
 (global-set-key (kbd "<f8>") 'whitespace-cleanup)
 
-(add-hook 'text-mode-hook  'turn-on-auto-fill)
-(add-hook 'latex-mode-hook  'turn-on-auto-fill)
-
 (autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
 
 (defun wc (&optional begin end)
@@ -41,29 +38,9 @@
 (global-set-key "\C-l" 'goto-line)
 
 
-;; allow for export=>beamer by placing
-;; #+LaTeX_CLASS: beamer in org files
-(unless (boundp 'org-export-latex-classes)
-  (setq org-export-latex-classes nil))
-(add-to-list 'org-export-latex-classes
-  ;; beamer class, for presentations
-  '("beamer"
-     "\\documentclass[11pt]{beamer}\n"
-
-     ("\\section{%s}" . "\\section*{%s}")
-
-     ("\\begin{frame}[fragile]\\frametitle{%s}"
-       "\\end{frame}"
-       "\\begin{frame}[fragile]\\frametitle{%s}"
-       "\\end{frame}")))
-(add-to-list 'org-export-latex-classes
-             '("article"
-               "\\documentclass{article}"
-               ("\\section{%s}" . "\\section*{%s}")))
-
 (global-set-key [f12] 'recompile)
 
-(set-default-font "Monospace-10")
+(set-default-font "Source code pro-18")
 
 (scroll-bar-mode -1)
 (menu-bar-mode 0)
