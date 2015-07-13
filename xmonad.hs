@@ -7,7 +7,8 @@ import XMonad.Hooks.EwmhDesktops
 import qualified XMonad.StackSet as W
 import XMonad.Util.EZConfig
 import qualified Data.Map as M
-  
+
+import XMonad.Layout.Grid
 import XMonad.Layout.Tabbed
 import XMonad.Layout.Accordion
 import XMonad.Layout.NoBorders
@@ -36,7 +37,7 @@ myConfig = ewmh desktopConfig {
 
 myWorkspaces = ["1:web","2","3","4","5","6","7:music","8:chat","9:mail"]
                     
-mylayoutHook =  smartBorders(tiled) ||| noBorders (Full) 
+mylayoutHook =  Grid ||| smartBorders(tiled) ||| noBorders (Full) 
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -55,10 +56,11 @@ startup = do
           -- spawn "feh --bg-scale ~/desktop.png"
           spawn "trayer --edge top --align right --SetDockType true --SetPartialStrut false  --expand true --width 10 --transparent true --alpha 0 --tint 0x000D2A --height 19"
           spawn "volumeicon"
-          spawn "pidgin"
-          spawn "synapse -s"
+          spawn "gnome-do"
+	  spawn "empathy"
+	  spawn "nm-applet"	
  	  spawn "/home/wva/.dropbox-dist/dropboxd"
-	  spawn "xfce4-power-manager"
+
 
           
 -- http://www.haskell.org/haskellwiki/Xmonad/Frequently_asked_questions#Rebinding_the_mod_key_.28Alt_conflicts_with_other_apps.3B_I_want_the_____key.21.29
@@ -87,12 +89,10 @@ myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
 -- Keybinding to toggle the gap for the bar.
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
-myManageHook = composeAll [title =? "Gajim" --> doF (W.shift "8:chat")
-	     		  ,className =? "Firefox" --> doF (W.shift "1:web")
-			  ,className =? "Evolution" --> doF (W.shift "9:mail")
-			  ,className =? "Claws-mail" --> doF (W.shift "9:mail")
-	       		  ,title =? "Ario" --> doF (W.shift "7:music")
+myManageHook = composeAll [className =? "Empathy" --> doF (W.shift "8:chat")
                           ,className =? "Xfce4-notifyd" --> doIgnore
-                          
+			  ,className =? "Do" --> doIgnore
+
+
                           ]
 
