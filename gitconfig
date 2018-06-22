@@ -3,3 +3,5 @@
 	email = wouter@vanatteveldt.com
 [push]
 	default = simple
+[core]
+	excludesfile = /home/wva/.gitignore

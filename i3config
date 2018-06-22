@@ -165,7 +165,7 @@ bindsym $mod+r mode "resize"
 bar {
     position top
     status_command i3status  -c ~/.i3/i3status.conf
-    output eDP1
+    output eDP-1
 
     mode hide
 	font pango: M+ 1m, FontAwesome, Ionicons, 18
@@ -183,7 +183,7 @@ bar {
 bar {
     position top
     status_command i3status
-    output DP1
+    output DP-1
     mode hide
     font pango:Source Code Pro 12px	
 }
@@ -202,7 +202,8 @@ exec nm-applet
 exec xset mouse 2 0
 exec feh --bg-scale ~/desktop.png
 exec gnome-sound-applet
-
+exec gsettings set org.gnome.desktop.interface text-scaling-factor 2
+exec /usr/lib/gnome-settings-daemon/gsd-xsettings 
 
 # from https://faq.i3wm.org/question/3747/enabling-multimedia-keys/
 # Pulse Audio controls

@@ -1,5 +1,3 @@
-export DJANGO_SETTINGS_MODULE='settings'
-export PYTHONPATH=~/amcat:~/xtas
 export EDITOR="emacs -nw"
 
 unset color_prompt force_color_prompt
