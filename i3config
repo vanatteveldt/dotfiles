@@ -43,6 +43,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+i exec synapse
 
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -183,9 +184,25 @@ bar {
 bar {
     position top
     status_command i3status
-    output DP-1
+    output DP-0
+    mode hide
+    font pango:Source Code Pro 16px	
+}
+
+bar {
+    position top
+    status_command i3status
+    output DP1
     mode hide
     font pango:Source Code Pro 12px	
+}
+
+bar {
+    position top
+    status_command i3status
+    output DP-1
+    mode hide
+    font pango:Source Code Pro 26px	
 }
 
 bar {
@@ -202,8 +219,9 @@ exec nm-applet
 exec xset mouse 2 0
 exec feh --bg-scale ~/desktop.png
 exec gnome-sound-applet
-exec gsettings set org.gnome.desktop.interface text-scaling-factor 2
-exec /usr/lib/gnome-settings-daemon/gsd-xsettings 
+
+exec gsettings set org.gnome.desktop.interface scaling-factor 2
+exec /usr/lib/gnome-settings-daemon/gsd-xsettings
 
 # from https://faq.i3wm.org/question/3747/enabling-multimedia-keys/
 # Pulse Audio controls
@@ -232,4 +250,4 @@ hide_edge_borders both
 bindsym $mod+"bracketleft" exec "xinput set-prop 12 'Device Enabled' 1"
 bindsym $mod+"bracketright" exec "xinput set-prop 12 'Device Enabled' 0"
 
-new_window 1pixel
+
